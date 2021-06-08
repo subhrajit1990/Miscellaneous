@@ -1,0 +1,36 @@
+CREATE TABLE `split_cards` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `icon_name` VARCHAR(45) NOT NULL,
+  `channel` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`)); commit;
+  
+  
+ insert  into split_cards(icon_name, channel) values('fa-bath','MB');
+insert  into split_cards(icon_name, channel) values('fa-bell','MB');
+insert  into split_cards(icon_name, channel) values('fa-binoculars','MB');
+insert  into split_cards(icon_name, channel) values('fa-birthday-cake','MB');
+insert  into split_cards(icon_name, channel) values('fa-blind','MB');
+insert  into split_cards(icon_name, channel) values('fa-beer','MB');
+insert  into split_cards(icon_name, channel) values('fa-rocket','MB');
+insert  into split_cards(icon_name, channel) values('fa-ship','MB');
+insert  into split_cards(icon_name, channel) values('fa-truck','MB');
+insert  into split_cards(icon_name, channel) values('fa-gamepad','MB');
+commit;
+
+
+/* HEROKU */
+
+
+
+begin;
+set transaction read write;
+
+CREATE TABLE split_group (
+  id SERIAL NOT NULL,
+  icon_name VARCHAR(45) NOT NULL,
+  channel VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id)); 
+
+  commit;
+  
+  
