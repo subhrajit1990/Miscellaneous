@@ -24,15 +24,15 @@ public class SwaggerConfig {
 	public Docket customImplementation() {
 		return new Docket(DocumentationType.SWAGGER_2).forCodeGeneration(true).apiInfo(apiInfo())
                 .useDefaultResponseMessages(false).select()
-                .apis(RequestHandlerSelectors.basePackage("bill.manager.controller")).paths(PathSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("misc.manager.controller")).paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo()
     {
-        return new ApiInfoBuilder().title("Bill Manager Services").description("Bill Manager Services")
+        return new ApiInfoBuilder().title("Misc Manager Services").description("Misc Manager Services")
                 .contact(
-                        new Contact("Subhrajit", "i-exceed.com", "Subhrajitsahu1990@gmail.com"))
+                        new Contact("Subhrajit", " Sahu", "Subhrajitsahu1990@gmail.com"))
                 .license("Proprietary").version("1.0.0").build();
     }
 }
